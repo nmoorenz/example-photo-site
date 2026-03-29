@@ -1,0 +1,14 @@
+{
+  "japan-2024": {
+    "title": "Japan",
+    "description": "Two weeks exploring Tokyo, Kyoto, and Osaka.",
+    "date": "April 2024",
+    "cover": "001.jpg"
+  },
+  "road-trip": {
+    "title": "Road Trip",
+    "description": "A long weekend drive through the mountains.",
+    "date": "January 2024",
+    "cover": "001.jpg"
+  }
+}

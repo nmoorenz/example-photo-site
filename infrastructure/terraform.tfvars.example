@@ -1,0 +1,7 @@
+# Copy this to terraform.tfvars and fill in your values
+# terraform.tfvars is gitignored — never commit it
+
+bucket_name     = "your-photos-bucket-name"   # must be globally unique
+aws_region      = "ap-southeast-2"
+cdn_domain      = "cdn.example.com"
+allowed_origins = ["https://photos.example.com", "https://cdn.example.com"]

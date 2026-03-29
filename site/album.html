@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Album — Photos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="config.js"></script>
+</head>
+<body>
+  <!-- Password gate -->
+  <div id="gate" class="gate">
+    <div class="gate-inner">
+      <p class="gate-label">enter password</p>
+      <input type="password" id="gate-input" class="gate-input" autocomplete="current-password" placeholder="·  ·  ·  ·  ·  ·" />
+      <p id="gate-error" class="gate-error"></p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <header class="album-header">
+      <a href="index.html" class="back-link">← all albums</a>
+      <div class="album-meta">
+        <h1 id="album-title" class="album-title"></h1>
+        <p id="album-date" class="album-date"></p>
+        <p id="album-description" class="album-description"></p>
+      </div>
+    </header>
+
+    <div id="loading" class="loading">
+      <span class="loading-dot"></span>
+      <span class="loading-dot"></span>
+      <span class="loading-dot"></span>
+    </div>
+
+    <!-- Slider -->
+    <div id="slider-wrap" class="slider-wrap hidden">
+      <div class="slider-stage">
+        <button class="slider-btn slider-btn--prev" id="prev-btn" aria-label="Previous photo">&#8592;</button>
+        <div class="slider-track-outer">
+          <div id="slider-track" class="slider-track"></div>
+        </div>
+        <button class="slider-btn slider-btn--next" id="next-btn" aria-label="Next photo">&#8594;</button>
+      </div>
+
+      <div class="slider-footer">
+        <span id="counter" class="counter">1 / 1</span>
+        <p id="caption" class="caption"></p>
+        <div id="thumbnails" class="thumbnails"></div>
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox hidden">
+      <button class="lightbox-close" id="lb-close">&#215;</button>
+      <button class="lightbox-nav lightbox-nav--prev" id="lb-prev">&#8592;</button>
+      <div class="lightbox-img-wrap">
+        <img id="lightbox-img" src="" alt="" />
+        <p id="lightbox-caption" class="lightbox-caption"></p>
+      </div>
+      <button class="lightbox-nav lightbox-nav--next" id="lb-next">&#8594;</button>
+    </div>
+  </div>
+
+  <script src="auth.js"></script>
+  <script src="album.js"></script>
+</body>
+</html>
